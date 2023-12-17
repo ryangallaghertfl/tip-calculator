@@ -36,6 +36,14 @@ class CalculatorVC: UIViewController {
 
     private func layout() {
         
+        view.addSubview(vStackView)
+        
+        vStackView.snp.makeConstraints { make in
+            make.leading.equalTo(view.snp.leadingMargin).offset(16)
+            make.trailing.equalTo(view.snp.trailingMargin).offset(-16)
+            make.bottom.equalTo(view.snp.bottomMargin).offset(-16)
+            make.top.equalTo(view.snp.topMargin).offset(16)
+        }
     }
 
 }
