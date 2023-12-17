@@ -22,6 +22,7 @@
 		A102280D2B2E4A96007C25D9 /* CombineCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = A102280C2B2E4A96007C25D9 /* CombineCocoa */; };
 		A10F5D662B2F570F0038C0B8 /* LogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10F5D652B2F570F0038C0B8 /* LogoView.swift */; };
 		A10F5D682B2F59540038C0B8 /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10F5D672B2F59540038C0B8 /* ResultView.swift */; };
+		A10F5D6A2B2F59950038C0B8 /* BillInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10F5D692B2F59950038C0B8 /* BillInputView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		A10227F32B2E4912007C25D9 /* tip_calculatorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tip_calculatorUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		A10F5D652B2F570F0038C0B8 /* LogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoView.swift; sourceTree = "<group>"; };
 		A10F5D672B2F59540038C0B8 /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
+		A10F5D692B2F59950038C0B8 /* BillInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillInputView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +154,7 @@
 			children = (
 				A10F5D652B2F570F0038C0B8 /* LogoView.swift */,
 				A10F5D672B2F59540038C0B8 /* ResultView.swift */,
+				A10F5D692B2F59950038C0B8 /* BillInputView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -304,6 +307,7 @@
 			files = (
 				A10227D52B2E4911007C25D9 /* CalculatorVC.swift in Sources */,
 				A10F5D662B2F570F0038C0B8 /* LogoView.swift in Sources */,
+				A10F5D6A2B2F59950038C0B8 /* BillInputView.swift in Sources */,
 				A10F5D682B2F59540038C0B8 /* ResultView.swift in Sources */,
 				A10227D12B2E4911007C25D9 /* AppDelegate.swift in Sources */,
 				A10227D32B2E4911007C25D9 /* SceneDelegate.swift in Sources */,
