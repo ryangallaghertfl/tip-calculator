@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SnapKit
 
 class CalculatorVC: UIViewController {
     
@@ -30,9 +31,12 @@ class CalculatorVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .yellow
+        layout()
     }
 
+    private func layout() {
+        
+    }
 
 }
 
