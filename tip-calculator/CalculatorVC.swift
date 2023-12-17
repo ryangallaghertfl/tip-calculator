@@ -14,6 +14,19 @@ class CalculatorVC: UIViewController {
     private let billInputView = BillInputView()
     private let tipInputView = TipInputView()
     private let splitInputView = SplitInputView()
+    
+    private lazy var vStackView: UIStackView = {
+        let stackView = UIStackView(arrangedSubviews: [
+            logoView,
+            resultView,
+            billInputView,
+            tipInputView,
+            splitInputView
+        ])
+        stackView.axis = .vertical
+        stackView.spacing = 36
+        return stackView
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
