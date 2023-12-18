@@ -8,6 +8,11 @@
 import UIKit
 
 class ResultView: UIView {
+    private let headerLabel: UILabel = {
+        LabelFactory.build(
+            text: "Total p/person",
+            font: ThemeFont.demibold(ofSize: 18))
+    }()
     
     init() {
         super.init(frame: .zero)
