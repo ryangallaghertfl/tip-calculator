@@ -13,6 +13,12 @@ class BillInputView: UIView {
         return HeaderView()
     }()
     
+    private let textFieldContainerView: UIView = {
+        let view = UIView()
+        view.backgroundColor = .white
+        return view
+    }()
+    
     init() {
         super.init(frame: .zero)
         layout()
