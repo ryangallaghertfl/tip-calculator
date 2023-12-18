@@ -35,6 +35,17 @@ class ResultView: UIView {
         return view
     }()
     
+    private lazy var vStackView: UIStackView = {
+        let stackView = UIStackView(arrangedSubviews: [
+        headerLabel,
+        amountPerPersonLabel,
+        horizontalLineView
+        ])
+        stackView.axis = .vertical
+        stackView.spacing = 8
+        return stackView
+    }()
+    
     init() {
         super.init(frame: .zero)
         layout()
