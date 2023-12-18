@@ -43,8 +43,8 @@ class LogoView: UIView {
     
     private lazy var hStackView: UIStackView = {
         let view = UIStackView(arrangedSubviews: [
-        
-        
+            imageView,
+            vStackView
         ])
         view.axis = .horizontal
         view.spacing = 8
