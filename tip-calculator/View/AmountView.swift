@@ -20,9 +20,9 @@ class AmountView: UIView {
             textAlignment: textAlignment)
     }()
     
-    private let amountLabel: UILabel = {
+    private lazy var amountLabel: UILabel = {
         let label = UILabel()
-        label.textAlignment = .left
+        label.textAlignment = textAlignment
         label.textColor = ThemeColour.primary
         let text = NSMutableAttributedString(
             string: "$0",
