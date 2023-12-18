@@ -72,6 +72,7 @@ class BillInputView: UIView {
             make.leading.equalToSuperview()
             make.centerY.equalTo(textFieldContainerView.snp.centerY)
             make.width.equalTo(68)
+            make.height.equalTo(24)
             make.trailing.equalTo(textFieldContainerView.snp.leading).offset(-24)
         }
         
