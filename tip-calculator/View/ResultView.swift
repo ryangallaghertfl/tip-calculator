@@ -46,6 +46,17 @@ class ResultView: UIView {
         return stackView
     }()
     
+    private lazy var hStackView: UIStackView = {
+        let stackView = UIStackView(arrangedSubviews: [
+        AmountView(),
+        UIView(),
+        AmountView()
+        ])
+        stackView.axis = .horizontal
+        stackView.distribution = .fillEqually
+        return stackView
+    }()
+    
     init() {
         super.init(frame: .zero)
         layout()
