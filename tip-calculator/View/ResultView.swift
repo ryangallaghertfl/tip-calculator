@@ -40,6 +40,7 @@ class ResultView: UIView {
         headerLabel,
         amountPerPersonLabel,
         horizontalLineView,
+        buildSpacerView(height: 0),
         hStackView
         ])
         stackView.axis = .vertical
