@@ -74,6 +74,11 @@ class ResultView: UIView {
         horizontalLineView.snp.makeConstraints { make in
             make.height.equalTo(2)
         }
+        
+        addShadow(offset: CGSize(width: 0, height: 3),
+                  colour: .black,
+                  radius: 12.0,
+                  opacity: 0.1)
     }
     
     required init?(coder: NSCoder) {
