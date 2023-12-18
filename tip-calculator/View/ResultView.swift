@@ -39,7 +39,8 @@ class ResultView: UIView {
         let stackView = UIStackView(arrangedSubviews: [
         headerLabel,
         amountPerPersonLabel,
-        horizontalLineView
+        horizontalLineView,
+        hStackView
         ])
         stackView.axis = .vertical
         stackView.spacing = 8
