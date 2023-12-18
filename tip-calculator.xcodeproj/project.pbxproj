@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A10147B92B304F5800EE8746 /* LabelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10147B82B304F5800EE8746 /* LabelFactory.swift */; };
 		A10227D12B2E4911007C25D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10227D02B2E4911007C25D9 /* AppDelegate.swift */; };
 		A10227D32B2E4911007C25D9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10227D22B2E4911007C25D9 /* SceneDelegate.swift */; };
 		A10227D52B2E4911007C25D9 /* CalculatorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10227D42B2E4911007C25D9 /* CalculatorVC.swift */; };
@@ -48,6 +49,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A10147B82B304F5800EE8746 /* LabelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelFactory.swift; sourceTree = "<group>"; };
 		A10227CD2B2E4911007C25D9 /* tip-calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "tip-calculator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A10227D02B2E4911007C25D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A10227D22B2E4911007C25D9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -100,6 +102,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A10147B72B304EE500EE8746 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				A10147B82B304F5800EE8746 /* LabelFactory.swift */,
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
 		A10227C42B2E4911007C25D9 = {
 			isa = PBXGroup;
 			children = (
@@ -124,6 +134,7 @@
 		A10227CF2B2E4911007C25D9 /* tip-calculator */ = {
 			isa = PBXGroup;
 			children = (
+				A10147B72B304EE500EE8746 /* Factory */,
 				A10F5D772B2F65570038C0B8 /* Extensions */,
 				A10F5D702B2F64D80038C0B8 /* config */,
 				A10F5D642B2F56F10038C0B8 /* View */,
@@ -345,6 +356,7 @@
 				A10F5D742B2F650B0038C0B8 /* ThemeFont.swift in Sources */,
 				A10227D32B2E4911007C25D9 /* SceneDelegate.swift in Sources */,
 				A10F5D792B2F658C0038C0B8 /* UIColor+extension.swift in Sources */,
+				A10147B92B304F5800EE8746 /* LabelFactory.swift in Sources */,
 				A10F5D6F2B2F5A2F0038C0B8 /* SplitInputView.swift in Sources */,
 				A10F5D6C2B2F59DA0038C0B8 /* TipInputView.swift in Sources */,
 			);
