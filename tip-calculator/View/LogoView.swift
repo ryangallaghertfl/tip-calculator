@@ -58,7 +58,15 @@ class LogoView: UIView {
     }
     
     private func layout() {
+        addSubview(hStackView)
+        hStackView.snp.makeConstraints { make in
+            make.top.bottom.equalToSuperview()
+            make.centerX.equalToSuperview()
+        }
         
+        imageView.snp.makeConstraints { make in
+            make.height.equalTo(imageView.snp.width)
+        }
     }
     
     required init?(coder: NSCoder) {
