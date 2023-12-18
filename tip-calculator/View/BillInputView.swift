@@ -54,6 +54,10 @@ class BillInputView: UIView {
         backgroundColor = .green
     }
     
+    @objc private func doneButtonTapped() {
+        
+    }
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
