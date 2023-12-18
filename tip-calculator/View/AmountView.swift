@@ -32,6 +32,15 @@ class AmountView: UIView {
         return label
     }()
     
+    private lazy var stackView: UIStackView = {
+        let stackView = UIStackView(arrangedSubviews: [
+        titleLabel,
+        amountLabel
+        ])
+        stackView.axis = .vertical
+        return stackView
+    }()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         layout()
