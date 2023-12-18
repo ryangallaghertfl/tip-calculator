@@ -66,7 +66,16 @@ class BillInputView: UIView {
     }
     
     private func layout() {
-        backgroundColor = .green
+        [headerView, textFieldContainerView].forEach(addSubview(_:))
+        
+        headerView.snp.makeConstraints { make in
+            make.leading.equalToSuperview()
+            make.centerY.equalTo(textFieldContainerView.snp.centerY)
+            make.width.equalTo(68)
+            make.trailing.equalTo(textFieldContainerView.snp.leading).offset(-24)
+        }
+        
+        
     }
     
     @objc private func doneButtonTapped() {
