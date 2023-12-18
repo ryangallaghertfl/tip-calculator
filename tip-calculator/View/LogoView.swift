@@ -15,6 +15,15 @@ class LogoView: UIView {
         return view
     }()
     
+    private let topLabel: UILabel = {
+        let label = UILabel()
+        let text = NSMutableAttributedString(
+            string: "Mr TIP",
+            attributes: [.font: ThemeFont.demibold(ofSize: 16)])
+        label.attributedText = text
+        return label
+    }()
+    
     private lazy var hStackView: UIStackView = {
         let view = UIStackView(arrangedSubviews: [
         
