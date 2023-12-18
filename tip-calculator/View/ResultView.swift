@@ -64,7 +64,16 @@ class ResultView: UIView {
     }
     
     private func layout() {
-        backgroundColor = .gray
+        addSubview(vStackView)
+        vStackView.snp.makeConstraints { make in
+            make.top.equalTo(snp.top).offset(24)
+            make.leading.equalTo(snp.leading).offset(24)
+            make.trailing.equalTo(snp.trailing).offset(-24)
+            make.bottom.equalTo(snp.bottom).offset(-24)
+        }
+        horizontalLineView.snp.makeConstraints { make in
+            make.height.equalTo(2)
+        }
     }
     
     required init?(coder: NSCoder) {
