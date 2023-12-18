@@ -15,6 +15,17 @@ class LogoView: UIView {
         return view
     }()
     
+    private lazy var hStackView: UIStackView = {
+        let view = UIStackView(arrangedSubviews: [
+        
+        
+        ])
+        view.axis = .horizontal
+        view.spacing = 8
+        view.alignment = .center
+        return view
+    }()
+    
     init() {
         super.init(frame: .zero)
         layout()
