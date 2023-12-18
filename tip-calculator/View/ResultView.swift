@@ -82,6 +82,12 @@ class ResultView: UIView {
                   opacity: 0.1)
     }
     
+    private func buildSpacerView(height: CGFloat) -> UIView {
+        let view = UIView()
+        view.heightAnchor.constraint(equalToConstant: height).isActive = true
+        return view
+    }
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
