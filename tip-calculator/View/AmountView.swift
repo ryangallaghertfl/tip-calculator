@@ -12,12 +12,12 @@ class AmountView: UIView {
     private let title: String
     private let textAlignment: NSTextAlignment
     
-    private let titleLabel: UILabel = {
+    private lazy var titleLabel: UILabel = {
         LabelFactory.build(
-            text: "total bill",
+            text: title,
             font: ThemeFont.regular(ofSize: 18),
             textColour: ThemeColour.text,
-            textAlignment: .left)
+            textAlignment: textAlignment)
     }()
     
     private let amountLabel: UILabel = {
