@@ -9,13 +9,19 @@ import UIKit
 
 class LogoView: UIView {
     
+    private let imageView: UIImageView = {
+        let view = UIImageView(image: .init(named: "icCalculatorBW"))
+        view.contentMode = .scaleAspectFit
+        return view
+    }()
+    
     init() {
         super.init(frame: .zero)
         layout()
     }
     
     private func layout() {
-        backgroundColor = .red
+        
     }
     
     required init?(coder: NSCoder) {
