@@ -9,6 +9,9 @@ import UIKit
 
 class AmountView: UIView {
     
+    private let title: String
+    private let textAlignment: NSTextAlignment
+    
     private let titleLabel: UILabel = {
         LabelFactory.build(
             text: "total bill",
@@ -41,8 +44,10 @@ class AmountView: UIView {
         return stackView
     }()
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
+    init(title: String, textAlignment: NSTextAlignment) {
+        self.title = title
+        self.textAlignment = textAlignment
+        super.init(frame: .zero)
         layout()
     }
     
