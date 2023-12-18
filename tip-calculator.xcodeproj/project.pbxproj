@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A10147B92B304F5800EE8746 /* LabelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10147B82B304F5800EE8746 /* LabelFactory.swift */; };
+		A10147BB2B306A8E00EE8746 /* UIView+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10147BA2B306A8E00EE8746 /* UIView+extension.swift */; };
 		A10227D12B2E4911007C25D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10227D02B2E4911007C25D9 /* AppDelegate.swift */; };
 		A10227D32B2E4911007C25D9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10227D22B2E4911007C25D9 /* SceneDelegate.swift */; };
 		A10227D52B2E4911007C25D9 /* CalculatorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10227D42B2E4911007C25D9 /* CalculatorVC.swift */; };
@@ -50,6 +51,7 @@
 
 /* Begin PBXFileReference section */
 		A10147B82B304F5800EE8746 /* LabelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelFactory.swift; sourceTree = "<group>"; };
+		A10147BA2B306A8E00EE8746 /* UIView+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+extension.swift"; sourceTree = "<group>"; };
 		A10227CD2B2E4911007C25D9 /* tip-calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "tip-calculator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A10227D02B2E4911007C25D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A10227D22B2E4911007C25D9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -197,6 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				A10F5D782B2F658C0038C0B8 /* UIColor+extension.swift */,
+				A10147BA2B306A8E00EE8746 /* UIView+extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -351,6 +354,7 @@
 				A10F5D662B2F570F0038C0B8 /* LogoView.swift in Sources */,
 				A10F5D6A2B2F59950038C0B8 /* BillInputView.swift in Sources */,
 				A10F5D682B2F59540038C0B8 /* ResultView.swift in Sources */,
+				A10147BB2B306A8E00EE8746 /* UIView+extension.swift in Sources */,
 				A10F5D722B2F64FA0038C0B8 /* ThemeColour.swift in Sources */,
 				A10227D12B2E4911007C25D9 /* AppDelegate.swift in Sources */,
 				A10F5D742B2F650B0038C0B8 /* ThemeFont.swift in Sources */,
