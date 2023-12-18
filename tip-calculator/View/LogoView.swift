@@ -20,6 +20,7 @@ class LogoView: UIView {
         let text = NSMutableAttributedString(
             string: "Mr TIP",
             attributes: [.font: ThemeFont.demibold(ofSize: 16)])
+        text.addAttributes([.font: ThemeFont.bold(ofSize: 24)], range: NSMakeRange(3, 3))
         label.attributedText = text
         return label
     }()
