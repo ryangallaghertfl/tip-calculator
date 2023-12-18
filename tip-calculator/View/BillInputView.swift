@@ -87,6 +87,12 @@ class BillInputView: UIView {
             make.leading.equalTo(textFieldContainerView.snp.leading).offset(16)
         }
         
+        textField.snp.makeConstraints { make in
+            make.top.bottom.equalToSuperview()
+            make.leading.equalTo(currencyDenominationLabel.snp.trailing).offset(16)
+            make.trailing.equalTo(textFieldContainerView.snp.trailing).offset(-16)
+        }
+        
         
         
         
