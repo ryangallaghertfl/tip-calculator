@@ -9,6 +9,10 @@ import UIKit
 
 class BillInputView: UIView {
     
+    private let headerView: HeaderView = {
+        return HeaderView()
+    }()
+    
     init() {
         super.init(frame: .zero)
         layout()
