@@ -41,11 +41,22 @@ class BillInputView: UIView {
         let toolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: frame.size.width, height: 36))
         toolbar.barStyle = .default
         toolbar.sizeToFit()
+        //button
         let doneButton = UIBarButtonItem(
             title: "Done",
             style: .plain,
             target: self,
             action: #selector(doneButtonTapped))
+        //toolbar config
+        toolbar.items = [
+            UIBarButtonItem(
+                barButtonSystemItem: .flexibleSpace,
+                target: nil,
+                action: nil),
+            doneButton
+            ]
+        toolbar.isUserInteractionEnabled = true
+        textField.inputAccessoryView = toolbar
         return textField
     }()
     
