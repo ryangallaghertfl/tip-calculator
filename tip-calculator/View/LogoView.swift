@@ -31,6 +31,16 @@ class LogoView: UIView {
                            textAlignment: .left)
     }()
     
+    private lazy var vStackView: UIStackView = {
+        let view = UIStackView(arrangedSubviews: [
+            topLabel,
+            bottomLabel
+        ])
+        view.axis = .vertical
+        view.spacing = -4
+        return view
+    }()
+    
     private lazy var hStackView: UIStackView = {
         let view = UIStackView(arrangedSubviews: [
         
