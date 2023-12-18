@@ -29,6 +29,12 @@ class ResultView: UIView {
         return label
     }()
     
+    private let horizontalLineView: UIView = {
+        let view = UIView()
+        view.backgroundColor = ThemeColour.separator
+        return view
+    }()
+    
     init() {
         super.init(frame: .zero)
         layout()
