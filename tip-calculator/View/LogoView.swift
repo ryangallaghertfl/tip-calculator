@@ -25,6 +25,12 @@ class LogoView: UIView {
         return label
     }()
     
+    private let bottomLabel: UILabel = {
+        LabelFactory.build(text: "Calculator",
+                           font: ThemeFont.demibold(ofSize: 20),
+                           textAlignment: .left)
+    }()
+    
     private lazy var hStackView: UIStackView = {
         let view = UIStackView(arrangedSubviews: [
         
