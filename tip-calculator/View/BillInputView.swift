@@ -30,6 +30,10 @@ class BillInputView: UIView {
     
     private lazy var textField: UITextField = {
         let textField = UITextField()
+        textField.borderStyle = .none
+        textField.font = ThemeFont.demibold(ofSize: 28)
+        textField.keyboardType = .decimalPad
+        textField.setContentHuggingPriority(.defaultLow, for: .horizontal)
         return textField
     }()
     
