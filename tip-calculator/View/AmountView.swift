@@ -27,7 +27,7 @@ class AmountView: UIView {
                 .font: ThemeFont.bold(ofSize: 24)
             ])
             text.addAttributes([
-                .font: ThemeFont.bold(ofSize: 24)], range: NSMakeRange(0, 1))
+                .font: ThemeFont.bold(ofSize: 16)], range: NSMakeRange(0, 1))
             label.attributedText = text
         return label
     }()
