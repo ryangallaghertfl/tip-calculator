@@ -28,6 +28,11 @@ class BillInputView: UIView {
         return label
     }()
     
+    private lazy var textField: UITextField = {
+        let textField = UITextField()
+        return textField
+    }()
+    
     init() {
         super.init(frame: .zero)
         layout()
