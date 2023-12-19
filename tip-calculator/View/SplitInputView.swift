@@ -22,6 +22,13 @@ class SplitInputView: UIView {
         return button
     }()
     
+    private lazy var incrementButton: UIButton = {
+        let button = buildButton(
+            text: "-",
+            corners: [.layerMaxXMinYCorner, .layerMaxXMaxYCorner])
+        return button
+    }()
+    
     init() {
         super.init(frame: .zero)
         layout()
