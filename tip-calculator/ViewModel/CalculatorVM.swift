@@ -17,6 +17,6 @@ class CalculatorVM {
     }
     
     struct OutputToView {
-        
+        let updateViewPublisher: AnyPublisher<Result, Never>
     }
 }
