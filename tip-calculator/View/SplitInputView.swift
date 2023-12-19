@@ -9,6 +9,12 @@ import UIKit
 
 class SplitInputView: UIView {
     
+    private let headerView: HeaderView = {
+        let view = HeaderView()
+        view.configure(topText: "Split", bottomText: "the total")
+        return view
+    }()
+    
     init() {
         super.init(frame: .zero)
         layout()
