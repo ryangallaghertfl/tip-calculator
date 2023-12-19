@@ -29,6 +29,13 @@ class SplitInputView: UIView {
         return button
     }()
     
+    private lazy var quantityLabel: UILabel = {
+        let label = LabelFactory.build(
+            text: "1",
+            font: ThemeFont.bold(ofSize: 20))
+        return label
+    }()
+    
     init() {
         super.init(frame: .zero)
         layout()
