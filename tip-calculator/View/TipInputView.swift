@@ -26,7 +26,21 @@ class TipInputView: UIView {
         backgroundColor = .systemPink
     }
     
-    
+    private func buildTipButton(tip: Tip) -> UIButton {
+        let button = UIButton(type: .custom)
+        button.backgroundColor = ThemeColour.primary
+        button.tintColor = .white
+        button.addCornerRadius(radius: 8.0)
+        let text = NSMutableAttributedString(
+            string: tip.stringValue,
+            attributes: [.font: ThemeFont.bold(ofSize: 20)
+            ])
+            text.addAttributes([
+                .font: ThemeFont.demibold(ofSize: 14)
+            ], range: NSMakeRange(2, 1))
+            button.setAttributedTitle(text, for: .normal)
+            return button
+    }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
