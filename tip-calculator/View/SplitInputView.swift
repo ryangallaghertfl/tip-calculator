@@ -59,6 +59,12 @@ class SplitInputView: UIView {
         stackView.snp.makeConstraints { make in
             make.top.bottom.trailing.equalToSuperview()
         }
+        
+        [incrementButton, decrementButton].forEach { button in
+            button.snp.makeConstraints { make in
+                make.width.equalTo(button.snp.height)
+            }
+        }
     }
     
     private func buildButton(text: String, corners: CACornerMask) -> UIButton {
