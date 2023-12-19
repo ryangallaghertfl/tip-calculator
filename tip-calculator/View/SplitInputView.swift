@@ -36,6 +36,17 @@ class SplitInputView: UIView {
         return label
     }()
     
+    private lazy var stackView: UIStackView = {
+        let stackView = UIStackView(arrangedSubviews: [
+        decrementButton,
+        quantityLabel,
+        incrementButton
+        ])
+        stackView.axis = .horizontal
+        stackView.spacing = 0
+        return stackView
+    }()
+    
     init() {
         super.init(frame: .zero)
         layout()
