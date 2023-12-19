@@ -19,4 +19,11 @@ class CalculatorVM {
     struct OutputToView {
         let updateViewPublisher: AnyPublisher<Result, Never>
     }
+    
+    func transform(input: InputFromVC) -> OutputToView {
+        
+        let result = Result(amountPerPerson: 500, totalBill: 1000, totalTip: 50.0)
+        
+        return OutputToView(updateViewPublisher: Just(result).eraseToAnyPublisher())
+    }
 }
