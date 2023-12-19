@@ -32,6 +32,18 @@ class TipInputView: UIView {
         return button
     }()
     
+    private lazy var buttonHStackView: UIStackView = {
+        let stackView = UIStackView(arrangedSubviews: [
+        tenPercentTipButton,
+        fifteenPercentTipButton,
+        twentyPercentTipButton
+        ])
+        stackView.distribution = .fillEqually
+        stackView.spacing = 16
+        stackView.axis = .horizontal
+        return stackView
+    }()
+    
     init() {
         super.init(frame: .zero)
         layout()
