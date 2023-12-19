@@ -71,7 +71,12 @@ class TipInputView: UIView {
     }
     
     private func layout() {
-        backgroundColor = .systemPink
+        
+        [headerView, buttonVStackView].forEach(addSubview(_:))
+        
+        buttonVStackView.snp.makeConstraints { make in
+            make.top.bottom.trailing.equalToSuperview()
+        }
     }
     
     private func buildTipButton(tip: Tip) -> UIButton {
