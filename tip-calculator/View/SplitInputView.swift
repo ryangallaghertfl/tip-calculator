@@ -15,6 +15,13 @@ class SplitInputView: UIView {
         return view
     }()
     
+    private lazy var decrementButton: UIButton = {
+        let button = buildButton(
+            text: "-",
+            corners: [.layerMinXMaxYCorner, .layerMinXMinYCorner])
+        return button
+    }()
+    
     init() {
         super.init(frame: .zero)
         layout()
