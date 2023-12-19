@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Combine
 import SnapKit
 
 class CalculatorVC: UIViewController {
@@ -35,6 +36,17 @@ class CalculatorVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         layout()
+        bind()
+    }
+    
+    private func bind() {
+         
+        let input = CalculatorVM.InputFromVC(
+            billPublisher: Just(10).eraseToAnyPublisher(),
+            tipPublisher: Just(.tenPercent).eraseToAnyPublisher(),
+            splitPublisher: Just(5).eraseToAnyPublisher())
+        
+        let outputToView = vm.transform(inputFromVC: input)
     }
 
     private func layout() {

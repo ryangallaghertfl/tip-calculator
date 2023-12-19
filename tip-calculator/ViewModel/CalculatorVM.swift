@@ -20,7 +20,7 @@ class CalculatorVM {
         let updateViewPublisher: AnyPublisher<Result, Never>
     }
     
-    func transform(input: InputFromVC) -> OutputToView {
+    func transform(inputFromVC: InputFromVC) -> OutputToView {
         
         let result = Result(amountPerPerson: 500, totalBill: 1000, totalTip: 50.0)
         
