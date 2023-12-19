@@ -21,6 +21,9 @@ class HeaderView: UIView {
             font: ThemeFont.regular(ofSize: 16))
     }()
     
+    private let topSpacerView = UIView()
+    private let bottomSpacerView = UIView()
+    
     init() {
         super.init(frame: .zero)
         layout()
