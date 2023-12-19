@@ -43,7 +43,13 @@ class HeaderView: UIView {
     }
     
     private func layout() {
-        backgroundColor = .red
+        addSubview(stackView)
+        stackView.snp.makeConstraints { make in
+            make.edges.equalToSuperview()
+        }
+        topSpacerView.snp.makeConstraints { make in
+            make.height.equalTo(bottomSpacerView)
+        }
     }
     
     required init?(coder: NSCoder) {
