@@ -78,6 +78,7 @@ class SplitInputView: UIView {
         let button = UIButton()
         button.setTitle(text, for: .normal)
         button.titleLabel?.font = ThemeFont.bold(ofSize: 20)
+        button.backgroundColor = ThemeColour.primary
         button.addRoundedCorners(corners: corners, radius: 8.0)
         return button
     }
