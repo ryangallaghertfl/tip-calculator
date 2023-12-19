@@ -22,6 +22,16 @@ class TipInputView: UIView {
         return button
     }()
     
+    private lazy var fifteenPercentTipButton: UIButton = {
+        let button = buildTipButton(tip: .fifteenPercent)
+        return button
+    }()
+    
+    private lazy var twentyPercentTipButton: UIButton = {
+        let button = buildTipButton(tip: .twentyPercent)
+        return button
+    }()
+    
     init() {
         super.init(frame: .zero)
         layout()
