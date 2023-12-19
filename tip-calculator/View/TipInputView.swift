@@ -54,6 +54,17 @@ class TipInputView: UIView {
         return stackView
     }()
     
+    private lazy var buttonVStackView: UIStackView = {
+        let stackView = UIStackView(arrangedSubviews: [
+        buttonHStackView,
+        customTipButton
+        ])
+        stackView.axis = .vertical
+        stackView.spacing = 16
+        stackView.distribution = .fillEqually
+        return stackView
+    }()
+    
     init() {
         super.init(frame: .zero)
         layout()
