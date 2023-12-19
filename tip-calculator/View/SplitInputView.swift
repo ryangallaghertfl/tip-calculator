@@ -53,7 +53,12 @@ class SplitInputView: UIView {
     }
     
     private func layout() {
-        backgroundColor = .systemBlue
+        
+        [headerView, stackView].forEach(addSubview(_:))
+        
+        stackView.snp.makeConstraints { make in
+            make.top.bottom.trailing.equalToSuperview()
+        }
     }
     
     private func buildButton(text: String, corners: CACornerMask) -> UIButton {
