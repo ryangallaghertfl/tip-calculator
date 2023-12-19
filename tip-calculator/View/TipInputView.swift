@@ -77,16 +77,25 @@ class TipInputView: UIView {
         buttonVStackView.snp.makeConstraints { make in
             make.top.bottom.trailing.equalToSuperview()
         }
+        
+        headerView.snp.makeConstraints { make in
+            make.leading.equalToSuperview()
+            make.trailing.equalTo(buttonVStackView.snp.leading).offset(-24)
+            make.width.equalTo(68)
+            make.centerY.equalTo(buttonHStackView.snp.centerY)
+            
+        }
     }
     
     private func buildTipButton(tip: Tip) -> UIButton {
         let button = UIButton(type: .custom)
         button.backgroundColor = ThemeColour.primary
-        button.tintColor = .white
         button.addCornerRadius(radius: 8.0)
         let text = NSMutableAttributedString(
             string: tip.stringValue,
-            attributes: [.font: ThemeFont.bold(ofSize: 20)
+            attributes: [
+                .font: ThemeFont.bold(ofSize: 20),
+                .foregroundColor: UIColor.white
             ])
             text.addAttributes([
                 .font: ThemeFont.demibold(ofSize: 14)
