@@ -15,6 +15,12 @@ class HeaderView: UIView {
             font: ThemeFont.bold(ofSize: 18))
     }()
     
+    private let bottomLabel: UILabel = {
+        LabelFactory.build(
+            text: nil,
+            font: ThemeFont.regular(ofSize: 16))
+    }()
+    
     init() {
         super.init(frame: .zero)
         layout()
