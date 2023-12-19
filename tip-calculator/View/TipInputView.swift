@@ -9,6 +9,14 @@ import UIKit
 
 class TipInputView: UIView {
     
+    private let headerView: HeaderView = {
+        let view = HeaderView()
+        view.configure(
+            topText: "Choose",
+            bottomText: "your tip")
+        return view
+    }()
+    
     init() {
         super.init(frame: .zero)
         layout()
