@@ -65,6 +65,13 @@ class SplitInputView: UIView {
                 make.width.equalTo(button.snp.height)
             }
         }
+        
+        headerView.snp.makeConstraints { make in
+            make.leading.equalToSuperview()
+            make.centerY.equalTo(stackView.snp.centerY)
+            make.trailing.equalTo(stackView.snp.leading).offset(-24)
+            make.width.equalTo(68)
+        }
     }
     
     private func buildButton(text: String, corners: CACornerMask) -> UIButton {
