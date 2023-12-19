@@ -17,6 +17,11 @@ class TipInputView: UIView {
         return view
     }()
     
+    private lazy var tenPercentTipButton: UIButton = {
+        let button = buildTipButton(tip: .tenPercent)
+        return button
+    }()
+    
     init() {
         super.init(frame: .zero)
         layout()
