@@ -24,6 +24,14 @@ class SplitInputView: UIView {
         backgroundColor = .systemBlue
     }
     
+    private func buildButton(text: String, corners: CACornerMask) -> UIButton {
+        let button = UIButton()
+        button.setTitle(text, for: .normal)
+        button.titleLabel?.font = ThemeFont.bold(ofSize: 20)
+        button.addRoundedCorners(corners: corners, radius: 8.0)
+        return button
+    }
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
