@@ -29,6 +29,8 @@ class CalculatorVC: UIViewController {
         stackView.spacing = 36
         return stackView
     }()
+    
+    private let vm = CalculatorVM()
 
     override func viewDidLoad() {
         super.viewDidLoad()
