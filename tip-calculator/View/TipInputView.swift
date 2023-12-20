@@ -76,6 +76,8 @@ class TipInputView: UIView {
         return tipSubject.eraseToAnyPublisher()
     }
     
+    private var cancellables = Set<AnyCancellable>()
+    
     init() {
         super.init(frame: .zero)
         layout()
