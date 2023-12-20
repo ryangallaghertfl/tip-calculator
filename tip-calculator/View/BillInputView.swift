@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import Combine
+import CombineCocoa
 
 class BillInputView: UIView {
     
@@ -65,9 +67,12 @@ class BillInputView: UIView {
         return textField
     }()
     
+    private var cancellables = Set<AnyCancellable>()
+    
     init() {
         super.init(frame: .zero)
         layout()
+        observe()
     }
     
     private func layout() {
@@ -99,9 +104,12 @@ class BillInputView: UIView {
             make.trailing.equalTo(textFieldContainerView.snp.trailing).offset(-16)
         }
         
-        
-        
-        
+    }
+    
+    private func observe() {
+        textField.textPublisher.sink { text in
+            print("Text: \(text)")
+        }.store(in: &cancellables)
     }
     
     @objc private func doneButtonTapped() {
