@@ -69,7 +69,9 @@ class TipInputView: UIView {
     
     //CurrentValueSubject can store a default value at the start whereas a passthroughsubject cannot
     private let tipSubject = CurrentValueSubject<Tip, Never>(.none)
-    
+    var valuePublisher: AnyPublisher<Tip, Never> {
+        return tipSubject.eraseToAnyPublisher()
+    }
     
     init() {
         super.init(frame: .zero)
