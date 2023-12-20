@@ -53,6 +53,9 @@ class TipInputView: UIView {
         button.backgroundColor = ThemeColour.primary
         button.tintColor = .white
         button.addCornerRadius(radius: 8.0)
+        button.tapPublisher.sink { [weak self] _ in
+            self?.handleCustomTipButton()
+        }.store(in: &cancellables)
         return button
     }()
     
@@ -107,6 +110,10 @@ class TipInputView: UIView {
             make.centerY.equalTo(buttonHStackView.snp.centerY)
             
         }
+    }
+    
+    private func  handleCustomTipButton() {
+        
     }
     
     private func buildTipButton(tip: Tip) -> UIButton {
