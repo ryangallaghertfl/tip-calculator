@@ -68,6 +68,9 @@ class BillInputView: UIView {
     }()
     
     private let billSubject: PassthroughSubject<Double, Never> = .init()
+    var valuePublisher: AnyPublisher<Double, Never> {
+        return billSubject.eraseToAnyPublisher()
+    }
     
     private var cancellables = Set<AnyCancellable>()
     
