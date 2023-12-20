@@ -113,7 +113,7 @@ class TipInputView: UIView {
     }
     
     private func  handleCustomTipButton() {
-        let alertController = UIAlertController = {
+        let alertController: UIAlertController = {
             let controller = UIAlertController(
                 title: "Enter custom tip",
                 message: nil,
@@ -123,7 +123,19 @@ class TipInputView: UIView {
                 textField.keyboardType = .numberPad
                 textField.autocorrectionType = .no
             }
-        }
+            let cancelAction = UIAlertAction(
+                title: "Cancel",
+                style: .cancel)
+            let okAction = UIAlertAction(
+                title: "OK",
+                style: .default) { [weak self] _ in
+                    guard let text = controller.textFields?.first?.text,
+                          let value = Int(text) else {return}
+                    self?.tipSubject.send(.custom(value: Int(value)))
+                }
+            [okAction, cancelAction].forEach(controller.addAction(_:))
+            return controller
+        }()
     }
     
     private func buildTipButton(tip: Tip) -> UIButton {
