@@ -30,6 +30,10 @@ class TipInputView: UIView {
     
     private lazy var fifteenPercentTipButton: UIButton = {
         let button = buildTipButton(tip: .fifteenPercent)
+        button.tapPublisher.flatMap({
+            Just(Tip.fifteenPercent)
+        }).assign(to: \.value, on: tipSubject)
+            .store(in: &cancellables)
         return button
     }()
     
