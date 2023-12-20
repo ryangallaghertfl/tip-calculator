@@ -67,6 +67,8 @@ class BillInputView: UIView {
         return textField
     }()
     
+    private let billSubject: PassthroughSubject<Double, Never> = .init()
+    
     private var cancellables = Set<AnyCancellable>()
     
     init() {
@@ -108,6 +110,7 @@ class BillInputView: UIView {
     
     private func observe() {
         textField.textPublisher.sink { text in
+            billSubject.send(text?.doubleValue)
             print("Text: \(text)")
         }.store(in: &cancellables)
     }
