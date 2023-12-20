@@ -113,7 +113,17 @@ class TipInputView: UIView {
     }
     
     private func  handleCustomTipButton() {
-        
+        let alertController = UIAlertController = {
+            let controller = UIAlertController(
+                title: "Enter custom tip",
+                message: nil,
+                preferredStyle: .alert)
+            controller.addTextField { textField in
+                textField.placeholder = "Make it generous!"
+                textField.keyboardType = .numberPad
+                textField.autocorrectionType = .no
+            }
+        }
     }
     
     private func buildTipButton(tip: Tip) -> UIButton {
