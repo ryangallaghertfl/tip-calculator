@@ -35,6 +35,7 @@
 		A10F5D722B2F64FA0038C0B8 /* ThemeColour.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10F5D712B2F64FA0038C0B8 /* ThemeColour.swift */; };
 		A10F5D742B2F650B0038C0B8 /* ThemeFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10F5D732B2F650B0038C0B8 /* ThemeFont.swift */; };
 		A10F5D792B2F658C0038C0B8 /* UIColor+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10F5D782B2F658C0038C0B8 /* UIColor+extension.swift */; };
+		A12135922B330FA900767BF8 /* String+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12135912B330FA900767BF8 /* String+extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +83,7 @@
 		A10F5D712B2F64FA0038C0B8 /* ThemeColour.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeColour.swift; sourceTree = "<group>"; };
 		A10F5D732B2F650B0038C0B8 /* ThemeFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeFont.swift; sourceTree = "<group>"; };
 		A10F5D782B2F658C0038C0B8 /* UIColor+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+extension.swift"; sourceTree = "<group>"; };
+		A12135912B330FA900767BF8 /* String+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -231,6 +233,7 @@
 			children = (
 				A10F5D782B2F658C0038C0B8 /* UIColor+extension.swift */,
 				A10147BA2B306A8E00EE8746 /* UIView+extension.swift */,
+				A12135912B330FA900767BF8 /* String+extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -399,6 +402,7 @@
 				A10147B92B304F5800EE8746 /* LabelFactory.swift in Sources */,
 				A10F5D6F2B2F5A2F0038C0B8 /* SplitInputView.swift in Sources */,
 				A10F5D6C2B2F59DA0038C0B8 /* TipInputView.swift in Sources */,
+				A12135922B330FA900767BF8 /* String+extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
