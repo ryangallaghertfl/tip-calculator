@@ -93,6 +93,7 @@ class TipInputView: UIView {
     init() {
         super.init(frame: .zero)
         layout()
+        observeTipSelection()
     }
     
     private func layout() {
@@ -137,6 +138,32 @@ class TipInputView: UIView {
             return controller
         }()
         parentViewController?.present(alertController, animated: true)
+    }
+    
+    private func observeTipSelection() {
+        tipSubject.sink { [unowned self ] tip in
+            resetButtonView()
+            switch tip {
+            case .none:
+                break
+            case .tenPercent:
+                tenPercentTipButton.backgroundColor = ThemeColour.secondary
+            case .fifteenPercent:
+                fifteenPercentTipButton.backgroundColor = ThemeColour.secondary
+            case .twentyPercent:
+                twentyPercentTipButton.backgroundColor = ThemeColour.secondary
+            case .custom(value: let value):
+                customTipButton.backgroundColor = ThemeColour.secondary
+                let text = NSMutableAttributedString(
+                    string: "$\(value)",
+                    attributes: [.font: ThemeFont.bold(ofSize: 20)
+                                ])
+                text.addAttributes([
+                    .font: ThemeFont.bold(ofSize: 14)
+                ], range: NSMakeRange(0, 1))
+                customTipButton.setAttributedTitle(text, for: .normal)
+            }
+        }.store(in: &cancellables)
     }
     
     private func resetButtonView() {
