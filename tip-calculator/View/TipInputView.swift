@@ -24,6 +24,7 @@ class TipInputView: UIView {
         button.tapPublisher.flatMap({
             Just(Tip.tenPercent)
         }).assign(to: \.value, on: tipSubject)
+            .store(in: &cancellables)
         return button
     }()
     
