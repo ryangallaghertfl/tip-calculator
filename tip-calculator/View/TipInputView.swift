@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import Combine
+import CombineCocoa
 
 class TipInputView: UIView {
     
@@ -64,6 +66,10 @@ class TipInputView: UIView {
         stackView.distribution = .fillEqually
         return stackView
     }()
+    
+    //CurrentValueSubject can store a default value at the start whereas a passthroughsubject cannot
+    private let tipSubject = CurrentValueSubject<Tip, Never>(.none)
+    
     
     init() {
         super.init(frame: .zero)
