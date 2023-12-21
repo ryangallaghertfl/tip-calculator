@@ -55,6 +55,8 @@ class SplitInputView: UIView {
         return splitSubject.eraseToAnyPublisher()
     }
     
+    private var cancellables = Set<AnyCancellable>()
+    
     init() {
         super.init(frame: .zero)
         layout()
