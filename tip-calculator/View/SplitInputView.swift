@@ -28,6 +28,10 @@ class SplitInputView: UIView {
         let button = buildButton(
             text: "+",
             corners: [.layerMaxXMinYCorner, .layerMaxXMaxYCorner])
+        button.tapPublisher.flatMap { [unowned self] in
+            Just(splitSubject.value + 1)
+        }.assign(to: \.value, on: splitSubject)
+            .store(in: &cancellables)
         return button
     }()
     
