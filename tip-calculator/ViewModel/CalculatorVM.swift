@@ -24,12 +24,25 @@ class CalculatorVM {
     
     func transform(inputFromVC: InputFromVC) -> OutputToView {
         
-        inputFromVC.splitPublisher.sink { split in
-            print("the split: \(split)")
-        }.store(in: &cancellables)
+
         
         let result = Result(amountPerPerson: 500, totalBill: 1000, totalTip: 50.0)
         
         return OutputToView(updateViewPublisher: Just(result).eraseToAnyPublisher())
+    }
+    
+    private func getTipAmount(bill: Double, tip: Tip) -> Double {
+        switch tip {
+        case .none:
+            return 0
+        case .tenPercent:
+            return bill * 0.1
+        case .fifteenPercent:
+            return bill * 0.15
+        case .twentyPercent:
+            return bill * 0.2
+        case .custom(value: let value):
+            return Double(value)
+        }
     }
 }
