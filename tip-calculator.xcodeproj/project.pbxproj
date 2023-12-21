@@ -38,6 +38,7 @@
 		A12135922B330FA900767BF8 /* String+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12135912B330FA900767BF8 /* String+extension.swift */; };
 		A12135942B3354DA00767BF8 /* UIResponder+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12135932B3354DA00767BF8 /* UIResponder+extension.swift */; };
 		A14CA52B2B34880000D2F84A /* Int+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14CA52A2B34880000D2F84A /* Int+extension.swift */; };
+		A14CA52D2B34A91800D2F84A /* Double+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14CA52C2B34A91800D2F84A /* Double+extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +89,7 @@
 		A12135912B330FA900767BF8 /* String+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+extension.swift"; sourceTree = "<group>"; };
 		A12135932B3354DA00767BF8 /* UIResponder+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIResponder+extension.swift"; sourceTree = "<group>"; };
 		A14CA52A2B34880000D2F84A /* Int+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+extension.swift"; sourceTree = "<group>"; };
+		A14CA52C2B34A91800D2F84A /* Double+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -240,6 +242,7 @@
 				A12135912B330FA900767BF8 /* String+extension.swift */,
 				A12135932B3354DA00767BF8 /* UIResponder+extension.swift */,
 				A14CA52A2B34880000D2F84A /* Int+extension.swift */,
+				A14CA52C2B34A91800D2F84A /* Double+extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -410,6 +413,7 @@
 				A10147B92B304F5800EE8746 /* LabelFactory.swift in Sources */,
 				A10F5D6F2B2F5A2F0038C0B8 /* SplitInputView.swift in Sources */,
 				A10F5D6C2B2F59DA0038C0B8 /* TipInputView.swift in Sources */,
+				A14CA52D2B34A91800D2F84A /* Double+extension.swift in Sources */,
 				A12135922B330FA900767BF8 /* String+extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
