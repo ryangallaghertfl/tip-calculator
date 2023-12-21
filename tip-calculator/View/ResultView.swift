@@ -80,7 +80,7 @@ class ResultView: UIView {
     
     func configure(result: Result) {
         let text = NSMutableAttributedString(
-            string: String(result.amountPerPerson),
+            string: result.amountPerPerson.currencyFormatted,
             attributes: [.font: ThemeFont.bold(ofSize: 48)])
         text.addAttributes(
             [.font: ThemeFont.bold(ofSize: 24)],
