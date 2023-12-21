@@ -55,6 +55,13 @@ class ResultView: UIView {
         return view
     }()
     
+    private let totalTipView: AmountView = {
+        let view = AmountView(
+            title: "Total Tip",
+            textAlignment: .right)
+        return view
+    }()
+    
     private lazy var hStackView: UIStackView = {
         let stackView = UIStackView(arrangedSubviews: [
             AmountView(
