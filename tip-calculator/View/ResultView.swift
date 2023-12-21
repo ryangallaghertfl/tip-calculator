@@ -48,6 +48,13 @@ class ResultView: UIView {
         return stackView
     }()
     
+    private let totalBillView: AmountView = {
+        let view = AmountView(
+            title: "Total Bill",
+            textAlignment: .left)
+        return view
+    }()
+    
     private lazy var hStackView: UIStackView = {
         let stackView = UIStackView(arrangedSubviews: [
             AmountView(
@@ -67,6 +74,8 @@ class ResultView: UIView {
         super.init(frame: .zero)
         layout()
     }
+    
+    
     
     private func layout() {
         backgroundColor = .white
