@@ -68,6 +68,7 @@ class SplitInputView: UIView {
     init() {
         super.init(frame: .zero)
         layout()
+        observe()
     }
     
     private func layout() {
@@ -90,6 +91,12 @@ class SplitInputView: UIView {
             make.trailing.equalTo(stackView.snp.leading).offset(-24)
             make.width.equalTo(68)
         }
+    }
+    
+    private func observe() {
+        splitSubject.sink { [unowned self] quantity in
+            quantityLabel.text = quantity.stringValue
+        }.store(in: &cancellables)
     }
     
     private func buildButton(text: String, corners: CACornerMask) -> UIButton {
