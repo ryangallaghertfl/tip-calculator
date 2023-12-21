@@ -60,7 +60,7 @@ class SplitInputView: UIView {
     
     private let splitSubject: CurrentValueSubject<Int, Never> = .init(1)
     var valuePublisher: AnyPublisher<Int, Never> {
-        return splitSubject.eraseToAnyPublisher()
+        return splitSubject.removeDuplicates().eraseToAnyPublisher()
     }
     
     private var cancellables = Set<AnyCancellable>()
