@@ -37,6 +37,7 @@
 		A10F5D792B2F658C0038C0B8 /* UIColor+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10F5D782B2F658C0038C0B8 /* UIColor+extension.swift */; };
 		A12135922B330FA900767BF8 /* String+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12135912B330FA900767BF8 /* String+extension.swift */; };
 		A12135942B3354DA00767BF8 /* UIResponder+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12135932B3354DA00767BF8 /* UIResponder+extension.swift */; };
+		A14CA52B2B34880000D2F84A /* Int+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14CA52A2B34880000D2F84A /* Int+extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +87,7 @@
 		A10F5D782B2F658C0038C0B8 /* UIColor+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+extension.swift"; sourceTree = "<group>"; };
 		A12135912B330FA900767BF8 /* String+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+extension.swift"; sourceTree = "<group>"; };
 		A12135932B3354DA00767BF8 /* UIResponder+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIResponder+extension.swift"; sourceTree = "<group>"; };
+		A14CA52A2B34880000D2F84A /* Int+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -237,6 +239,7 @@
 				A10147BA2B306A8E00EE8746 /* UIView+extension.swift */,
 				A12135912B330FA900767BF8 /* String+extension.swift */,
 				A12135932B3354DA00767BF8 /* UIResponder+extension.swift */,
+				A14CA52A2B34880000D2F84A /* Int+extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -392,6 +395,7 @@
 				A12135942B3354DA00767BF8 /* UIResponder+extension.swift in Sources */,
 				A10147BD2B3081FC00EE8746 /* AmountView.swift in Sources */,
 				A10147C22B31E66300EE8746 /* Tip.swift in Sources */,
+				A14CA52B2B34880000D2F84A /* Int+extension.swift in Sources */,
 				A10227D52B2E4911007C25D9 /* CalculatorVC.swift in Sources */,
 				A10F5D662B2F570F0038C0B8 /* LogoView.swift in Sources */,
 				A10F5D6A2B2F59950038C0B8 /* BillInputView.swift in Sources */,
