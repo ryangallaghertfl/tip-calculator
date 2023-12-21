@@ -86,8 +86,8 @@ class ResultView: UIView {
             [.font: ThemeFont.bold(ofSize: 24)],
             range: NSMakeRange(0, 1))
         amountPerPersonLabel.attributedText = text
-        totalBillView.configure(text: String(result.totalBill))
-        totalTipView.configure(text: String(result.totalTip))
+        totalBillView.configure(amount: result.totalBill)
+        totalTipView.configure(amount: result.totalTip)
     }
     
     private func layout() {
