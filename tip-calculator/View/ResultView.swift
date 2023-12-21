@@ -64,13 +64,9 @@ class ResultView: UIView {
     
     private lazy var hStackView: UIStackView = {
         let stackView = UIStackView(arrangedSubviews: [
-            AmountView(
-                title: "Total Bill",
-                textAlignment: .left),
+            totalBillView,
             UIView(),
-            AmountView(
-                title: "Total Tip",
-                textAlignment: .right)
+            totalTipView
         ])
         stackView.axis = .horizontal
         stackView.distribution = .fillEqually
