@@ -35,6 +35,7 @@ class CalculatorVC: UIViewController {
     private let vm = CalculatorVM()
     private var cancellables = Set<AnyCancellable>()
     
+    //tapping off of the inputView
     private lazy var viewTapPublisher: AnyPublisher<Void, Never> = {
         let tapGesture = UITapGestureRecognizer(target: self, action: nil)
         view.addGestureRecognizer(tapGesture)
@@ -47,6 +48,7 @@ class CalculatorVC: UIViewController {
         super.viewDidLoad()
         layout()
         bind()
+        observe()
     }
     
     private func bind() {
@@ -62,6 +64,12 @@ class CalculatorVC: UIViewController {
             resultView.configure(result: result)
         }.store(in: &cancellables)
         
+    }
+    
+    private func observe() {
+        viewTapPublisher.sink { [unowned self] value in
+            view.endEditing(true)
+        }.store(in: &cancellables)
     }
 
     private func layout() {
