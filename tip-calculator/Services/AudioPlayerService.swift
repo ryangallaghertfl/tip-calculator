@@ -14,6 +14,8 @@ protocol AudioPlayerService {
 
 final class DefaultAudioPlayer: AudioPlayerService {
     
+    private var player: AVAudioPlayer?
+    
     func playSound() {
         <#code#>
     }
