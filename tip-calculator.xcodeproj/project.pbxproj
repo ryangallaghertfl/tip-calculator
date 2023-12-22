@@ -39,6 +39,7 @@
 		A12135942B3354DA00767BF8 /* UIResponder+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12135932B3354DA00767BF8 /* UIResponder+extension.swift */; };
 		A14CA52B2B34880000D2F84A /* Int+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14CA52A2B34880000D2F84A /* Int+extension.swift */; };
 		A14CA52D2B34A91800D2F84A /* Double+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14CA52C2B34A91800D2F84A /* Double+extension.swift */; };
+		A151AF942B35E583009ADEF0 /* click.m4a in Resources */ = {isa = PBXBuildFile; fileRef = A151AF932B35E583009ADEF0 /* click.m4a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +91,7 @@
 		A12135932B3354DA00767BF8 /* UIResponder+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIResponder+extension.swift"; sourceTree = "<group>"; };
 		A14CA52A2B34880000D2F84A /* Int+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+extension.swift"; sourceTree = "<group>"; };
 		A14CA52C2B34A91800D2F84A /* Double+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+extension.swift"; sourceTree = "<group>"; };
+		A151AF932B35E583009ADEF0 /* click.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = click.m4a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +173,7 @@
 		A10227CF2B2E4911007C25D9 /* tip-calculator */ = {
 			isa = PBXGroup;
 			children = (
+				A151AF922B35E562009ADEF0 /* Resources */,
 				A10147C52B32060500EE8746 /* ViewModel */,
 				A10147C02B31E64F00EE8746 /* Models */,
 				A10147B72B304EE500EE8746 /* Factory */,
@@ -245,6 +248,14 @@
 				A14CA52C2B34A91800D2F84A /* Double+extension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		A151AF922B35E562009ADEF0 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A151AF932B35E583009ADEF0 /* click.m4a */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -367,6 +378,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A151AF942B35E583009ADEF0 /* click.m4a in Resources */,
 				A10227DD2B2E4912007C25D9 /* LaunchScreen.storyboard in Resources */,
 				A10227DA2B2E4912007C25D9 /* Assets.xcassets in Resources */,
 			);
