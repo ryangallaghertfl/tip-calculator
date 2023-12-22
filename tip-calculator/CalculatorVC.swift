@@ -66,7 +66,7 @@ class CalculatorVC: UIViewController {
         let input = CalculatorVM.InputFromVC(
             billPublisher: billInputView.valuePublisher,
             tipPublisher: tipInputView.valuePublisher,
-            splitPublisher: splitInputView.valuePublisher)
+            splitPublisher: splitInputView.valuePublisher, logoViewTapPublisher: LogoViewTapPublisher)
         
         let outputToView = vm.transform(inputFromVC: input)
         
