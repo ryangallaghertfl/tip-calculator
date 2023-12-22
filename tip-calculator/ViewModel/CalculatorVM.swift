@@ -39,7 +39,9 @@ class CalculatorVM {
             return Just(result)
             }.eraseToAnyPublisher()
         
-        return OutputToView(updateViewPublisher: updateViewPublisher)
+        let resetCalculatorPublisher = inputFromVC.logoViewTapPublisher
+        
+        return OutputToView(updateViewPublisher: updateViewPublisher, resetCalculatorPublisher: resetCalculatorPublisher)
     }
     
     private func getTipAmount(bill: Double, tip: Tip) -> Double {
