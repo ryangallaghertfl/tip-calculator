@@ -77,6 +77,7 @@ class CalculatorVC: UIViewController {
         outputToView.resetCalculatorPublisher.sink { [unowned self] _ in
             billInputView.reset()
             tipInputView.reset()
+            splitInputView.reset()
         }.store(in: &cancellables)
         
     }
