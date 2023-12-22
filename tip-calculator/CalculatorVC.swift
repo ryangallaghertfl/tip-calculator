@@ -44,6 +44,16 @@ class CalculatorVC: UIViewController {
         }.eraseToAnyPublisher()
     }()
 
+    
+    //double-tapping on logoview resets inputs and selections
+    private lazy var LogoViewTapPublisher: AnyPublisher<Void, Never> = {
+        let tapGesture = UITapGestureRecognizer(target: self, action: nil)
+        tapGesture.numberOfTapsRequired = 2
+        view.addGestureRecognizer(tapGesture)
+        return tapGesture.tapPublisher.flatMap { _ in
+            Just(())
+        }.eraseToAnyPublisher()
+    }()
     override func viewDidLoad() {
         super.viewDidLoad()
         layout()
@@ -69,6 +79,10 @@ class CalculatorVC: UIViewController {
     private func observe() {
         viewTapPublisher.sink { [unowned self] value in
             view.endEditing(true)
+        }.store(in: &cancellables)
+        
+        LogoViewTapPublisher.sink { _ in
+            print("logoView is tapped!")
         }.store(in: &cancellables)
     }
 
