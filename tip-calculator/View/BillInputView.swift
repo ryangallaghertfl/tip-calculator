@@ -111,6 +111,11 @@ class BillInputView: UIView {
         
     }
     
+    func reset() {
+        textField.text = nil
+        billSubject.send(0)
+    }
+    
     private func observe() {
         textField.textPublisher.sink { [unowned self]
             text in
