@@ -84,10 +84,6 @@ class CalculatorVC: UIViewController {
         viewTapPublisher.sink { [unowned self] value in
             view.endEditing(true)
         }.store(in: &cancellables)
-        
-        LogoViewTapPublisher.sink { _ in
-            print("logoView is tapped!")
-        }.store(in: &cancellables)
     }
 
     private func layout() {
