@@ -159,7 +159,7 @@ class TipInputView: UIView {
             case .custom(value: let value):
                 customTipButton.backgroundColor = ThemeColour.secondary
                 let text = NSMutableAttributedString(
-                    string: "$\(value)",
+                    string: "£\(value)",
                     attributes: [.font: ThemeFont.bold(ofSize: 20)
                                 ])
                 text.addAttributes([
