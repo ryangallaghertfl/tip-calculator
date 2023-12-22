@@ -46,7 +46,9 @@ class CalculatorVM {
             return Just(result)
             }.eraseToAnyPublisher()
         
-        let resetCalculatorPublisher = inputFromVC.logoViewTapPublisher
+        let resetCalculatorPublisher = inputFromVC.logoViewTapPublisher.handleEvents(receiveOutput: { [unowned self] in
+            audioPlayerService.playSound()
+        })
         
         return OutputToView(updateViewPublisher: updateViewPublisher, resetCalculatorPublisher: resetCalculatorPublisher)
     }
