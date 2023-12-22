@@ -96,6 +96,10 @@ class TipInputView: UIView {
         observeTipSelection()
     }
     
+    func reset() {
+        tipSubject.send(.none)
+    }
+    
     private func layout() {
         
         [headerView, buttonVStackView].forEach(addSubview(_:))
