@@ -24,6 +24,13 @@ class CalculatorVM {
     
     private var cancellables = Set<AnyCancellable>()
     
+    //dependency injection via protocol
+    private let audioPlayerService: AudioPlayerService
+    
+    init(audioPlayerService: AudioPlayerService = DefaultAudioPlayer()) {
+        self.audioPlayerService = audioPlayerService
+    }
+    
     func transform(inputFromVC: InputFromVC) -> OutputToView {
         let updateViewPublisher = Publishers.CombineLatest3(
             inputFromVC.billPublisher,
