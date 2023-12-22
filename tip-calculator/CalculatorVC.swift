@@ -7,6 +7,7 @@
 
 import UIKit
 import Combine
+import CombineCocoa
 import SnapKit
 
 class CalculatorVC: UIViewController {
@@ -33,6 +34,14 @@ class CalculatorVC: UIViewController {
     
     private let vm = CalculatorVM()
     private var cancellables = Set<AnyCancellable>()
+    
+    private lazy var viewTapPublisher: AnyPublisher<Void, Never> = {
+        let tapGesture = UITapGestureRecognizer(target: self, action: nil)
+        view.addGestureRecognizer(tapGesture)
+        return tapGesture.tapPublisher.flatMap { _ in
+            Just(())
+        }.eraseToAnyPublisher()
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
