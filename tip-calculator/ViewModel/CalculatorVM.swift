@@ -19,6 +19,7 @@ class CalculatorVM {
     
     struct OutputToView {
         let updateViewPublisher: AnyPublisher<Result, Never>
+        let resetCalculatorPublisher: AnyPublisher<Void, Never>
     }
     
     private var cancellables = Set<AnyCancellable>()
