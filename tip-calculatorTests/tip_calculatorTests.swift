@@ -43,6 +43,38 @@ final class tip_calculatorTests: XCTestCase {
             XCTAssertEqual(result.totalTip, 0)
         }.store(in: &cancellables)
     }
+    
+    func test_Result_givenNoTip_2People_amount100_totalPerPerson_shouldBe50() {
+        
+        let bill: Double = 100.00
+        let tip: Tip = .none
+        let split: Int = 2
+        let mockInput = fakeBuildInput(bill: bill, tip: tip, split: split)
+        
+        let vmOutput = sut.transform(inputFromVC: mockInput)
+        
+        vmOutput.updateViewPublisher.sink { result in
+            XCTAssertEqual(result.amountPerPerson, 50)
+            XCTAssertEqual(result.totalBill, 100)
+            XCTAssertEqual(result.totalTip, 0)
+        }.store(in: &cancellables)
+    }
+    
+    func test_Result_givenTenpercentTip_2People_amount100_totalPerPerson_shouldBe55() {
+        
+        let bill: Double = 100.00
+        let tip: Tip = .tenPercent
+        let split: Int = 2
+        let mockInput = fakeBuildInput(bill: bill, tip: tip, split: split)
+        
+        let vmOutput = sut.transform(inputFromVC: mockInput)
+        
+        vmOutput.updateViewPublisher.sink { result in
+            XCTAssertEqual(result.amountPerPerson, 55)
+            XCTAssertEqual(result.totalBill, 110)
+            XCTAssertEqual(result.totalTip, 10)
+        }.store(in: &cancellables)
+    }
 
         //mocks the input from a VC
     private func fakeBuildInput(bill: Double, tip: Tip, split: Int) -> CalculatorVM.InputFromVC {
