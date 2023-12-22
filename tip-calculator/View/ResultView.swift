@@ -18,7 +18,7 @@ class ResultView: UIView {
         let label = UILabel()
         label.textAlignment = .center
         let text = NSMutableAttributedString(
-            string: "$0",
+            string: "£0",
             attributes: [
                 .font: ThemeFont.bold(ofSize: 48)
             ])
