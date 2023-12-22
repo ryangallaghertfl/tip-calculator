@@ -74,8 +74,8 @@ class CalculatorVC: UIViewController {
             resultView.configure(result: result)
         }.store(in: &cancellables)
         
-        outputToView.resetCalculatorPublisher.sink { _ in
-            print("test to reset the form")
+        outputToView.resetCalculatorPublisher.sink { [unowned self] _ in
+            billInputView.reset()
         }.store(in: &cancellables)
         
     }
