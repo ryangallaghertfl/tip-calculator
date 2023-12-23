@@ -91,6 +91,22 @@ final class tip_calculatorTests: XCTestCase {
             XCTAssertEqual(result.totalTip, 201)
         }.store(in: &cancellables)
     }
+    
+    func test_whenLogoView_tapped_soundFileShouldPlay_calculatorShouldReset() {
+        
+        let input = fakeBuildInput(bill: 100, tip: .tenPercent, split: 2)
+        let output = sut.transform(inputFromVC: input)
+        let firstExpectation = XCTestExpectation(description: "reset calculator called")
+        
+        output.resetCalculatorPublisher.sink { _ in
+            firstExpectation.fulfill()
+        }.store(in: &cancellables)
+        
+        logoViewTapSubject.send()
+        wait(for: [firstExpectation], timeout: 1.0)
+    }
+    
+    
 
         //mocks the input from a VC
     private func fakeBuildInput(bill: Double, tip: Tip, split: Int) -> CalculatorVM.InputFromVC {
