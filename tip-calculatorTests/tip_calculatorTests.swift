@@ -99,13 +99,14 @@ final class tip_calculatorTests: XCTestCase {
         let input = fakeBuildInput(bill: 100, tip: .tenPercent, split: 2)
         let output = sut.transform(inputFromVC: input)
         let firstExpectation = XCTestExpectation(description: "reset calculator called")
+        let secondExpectation = audioPlayerService.expectation
         
         output.resetCalculatorPublisher.sink { _ in
             firstExpectation.fulfill()
         }.store(in: &cancellables)
         
         logoViewTapSubject.send()
-        wait(for: [firstExpectation], timeout: 1.0)
+        wait(for: [firstExpectation, secondExpectation], timeout: 1.0)
     }
     
     
