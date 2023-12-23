@@ -33,7 +33,7 @@ final class tip_calculatorSnapshotTests: XCTestCase {
         
         let view = ResultView()
         
-        assertSnapshot(matching: view, as: .image(size: size), record: true)
-        //assertSnapshot(matching: view, as: .image(size: size))
+        //assertSnapshot(matching: view, as: .image(size: size), record: true)
+        assertSnapshot(matching: view, as: .image(size: size))
     }
 }
