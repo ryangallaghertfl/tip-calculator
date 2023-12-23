@@ -36,4 +36,14 @@ final class tip_calculatorSnapshotTests: XCTestCase {
         //assertSnapshot(matching: view, as: .image(size: size), record: true)
         assertSnapshot(matching: view, as: .image(size: size))
     }
+    
+    func test_initialTipInputView() {
+        
+        let size = CGSize(width: screenWidth, height: 56+56+16)
+        
+        let view = TipInputView()
+        
+        assertSnapshot(matching: view, as: .image(size: size), record: true)
+        //assertSnapshot(matching: view, as: .image(size: size))
+    }
 }
