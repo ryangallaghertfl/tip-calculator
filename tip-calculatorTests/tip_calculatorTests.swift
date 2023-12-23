@@ -28,6 +28,7 @@ final class tip_calculatorTests: XCTestCase {
         super.tearDown()
         sut = nil
         cancellables = nil
+        audioPlayerService = nil
     }
     
     func test_Result_givenNoTip_1Person_amount100_totalPerPerson_shouldBe100() {
