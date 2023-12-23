@@ -15,9 +15,11 @@ final class tip_calculatorTests: XCTestCase {
     private var cancellables: Set<AnyCancellable>!
     
     private let logoViewTapSubject = PassthroughSubject<Void, Never>()
+    private var audioPlayerService: MockAudioPlayerService!
 
     override func setUp() {
-        sut = .init()
+        audioPlayerService = .init()
+        sut = .init(audioPlayerService: audioPlayerService)
         cancellables = .init()
         super.setUp()
     }
@@ -116,5 +118,12 @@ final class tip_calculatorTests: XCTestCase {
             splitPublisher: Just(split).eraseToAnyPublisher(),
             logoViewTapPublisher: logoViewTapSubject.eraseToAnyPublisher()
         )
+    }
+}
+
+class MockAudioPlayerService: AudioPlayerService {
+    var expectation = XCTestExpectation(description: "playSound is called")
+    func playSound() {
+        expectation.fulfill()
     }
 }
