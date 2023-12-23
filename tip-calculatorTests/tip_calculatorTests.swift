@@ -94,7 +94,7 @@ final class tip_calculatorTests: XCTestCase {
         }.store(in: &cancellables)
     }
     
-    func test_whenLogoView_tapped_soundFileShouldPlay_calculatorShouldReset() {
+    func test_whenLogoViewTapped_PublisherShouldEmitPlay_soundFileLogic_ShouldEmitResetCalculatorLogic() {
         
         let input = fakeBuildInput(bill: 100, tip: .tenPercent, split: 2)
         let output = sut.transform(inputFromVC: input)
