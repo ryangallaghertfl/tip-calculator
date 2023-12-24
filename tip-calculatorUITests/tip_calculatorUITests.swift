@@ -29,5 +29,9 @@ final class tip_calculatorUITests: XCTestCase {
     func test_ResultViewDefaultValues_AmountPerPersonShouldBeZero() {
         XCTAssertEqual(screen.totalAmountPerPersonValueLabel.label, "£0")
     }
+    
+    func test_ResultViewDefaultValues_TotalBillValueShouldBeZero() {
+        XCTAssertEqual(screen.totalBillValueLabel.label, "£0")
+    }
 
 }
