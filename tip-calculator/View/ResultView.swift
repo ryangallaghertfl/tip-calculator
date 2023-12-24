@@ -52,7 +52,8 @@ class ResultView: UIView {
     private let totalBillView: AmountView = {
         let view = AmountView(
             title: "Total Bill",
-            textAlignment: .left)
+            textAlignment: .left
+            amountLabelIdentifier: ScreenIdentifier.ResultView.totalBillValueLabel.rawValue)
         return view
     }()
     
