@@ -31,6 +31,7 @@ class TipInputView: UIView {
     
     private lazy var fifteenPercentTipButton: UIButton = {
         let button = buildTipButton(tip: .fifteenPercent)
+        button.accessibilityIdentifier = ScreenIdentifier.TipInputView.fifteenPercentButton.rawValue
         button.tapPublisher.flatMap({
             Just(Tip.fifteenPercent)
         }).assign(to: \.value, on: tipSubject)
