@@ -33,6 +33,7 @@ class SplitInputView: UIView {
         let button = buildButton(
             text: "+",
             corners: [.layerMaxXMinYCorner, .layerMaxXMaxYCorner])
+        button.accessibilityIdentifier = ScreenIdentifier.SplitInputView.incrementButton.rawValue
         button.tapPublisher.flatMap { [unowned self] in
             Just(splitSubject.value + 1)
         }.assign(to: \.value, on: splitSubject)
