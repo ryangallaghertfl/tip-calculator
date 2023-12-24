@@ -51,6 +51,7 @@ class TipInputView: UIView {
     
     private lazy var customTipButton: UIButton = {
         let button = UIButton()
+        button.accessibilityIdentifier = ScreenIdentifier.TipInputView.customTipButton.rawValue
         button.setTitle("Custom tip", for: .normal)
         button.titleLabel?.font = ThemeFont.bold(ofSize: 20)
         button.backgroundColor = ThemeColour.primary
