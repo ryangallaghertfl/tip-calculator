@@ -22,5 +22,10 @@ class CalculatorScreen {
     var totalBillValueLabel: XCUIElement {
         return app.staticTexts[ScreenIdentifier.ResultView.totalBillValueLabel.rawValue]
     }
+    
+    var totalTipValueLabel: XCUIElement {
+        return app.staticTexts[ScreenIdentifier.ResultView.totalTipValueLabel.rawValue]
+    }
+    
 }
 
