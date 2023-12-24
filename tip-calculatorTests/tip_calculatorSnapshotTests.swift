@@ -68,8 +68,8 @@ final class tip_calculatorSnapshotTests: XCTestCase {
         let textField = view.allSubViewsOf(type: UITextField.self).first
         textField?.text = "500"
         
-        assertSnapshot(matching: view, as: .image(size: size), record: true)
-        //assertSnapshot(matching: view, as: .image(size: size))
+        //assertSnapshot(matching: view, as: .image(size: size), record: true)
+        assertSnapshot(matching: view, as: .image(size: size))
     }
     
     func test_initialTipInputView() {
