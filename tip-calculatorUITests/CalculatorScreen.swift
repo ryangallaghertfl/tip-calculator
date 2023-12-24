@@ -18,5 +18,9 @@ class CalculatorScreen {
     var totalAmountPerPersonValueLabel: XCUIElement {
         return app.staticTexts[ScreenIdentifier.ResultView.totalAmountPerPersonValueLabel.rawValue]
     }
+    
+    var totalBillValueLabel: XCUIElement {
+        return app.staticTexts[ScreenIdentifier.ResultView.totalBillValueLabel.rawValue]
+    }
 }
 
