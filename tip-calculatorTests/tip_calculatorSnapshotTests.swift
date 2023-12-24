@@ -82,6 +82,20 @@ final class tip_calculatorSnapshotTests: XCTestCase {
         assertSnapshot(matching: view, as: .image(size: size))
     }
     
+    func test_TipInputView_10PercentSelectedShouldBeOrange() {
+        
+        let size = CGSize(width: screenWidth, height: 56+56+16)
+        
+        let view = TipInputView()
+        //gets the 10% button
+        let button = view.allSubViewsOf(type: UIButton.self).first
+        //taps which should sendAction to change colour
+        button?.sendActions(for: .touchUpInside)
+        
+        assertSnapshot(matching: view, as: .image(size: size), record: true)
+        //assertSnapshot(matching: view, as: .image(size: size))
+    }
+    
     func test_initialSplitInputView() {
         
         let size = CGSize(width: screenWidth, height: 56)
