@@ -59,6 +59,19 @@ final class tip_calculatorSnapshotTests: XCTestCase {
         assertSnapshot(matching: view, as: .image(size: size))
     }
     
+    func test_BillInputViewWithValues() {
+        
+        let size = CGSize(width: screenWidth, height: 56)
+    
+        let view = BillInputView()
+        //workaround to pass in values using func from UIView ext
+        let textField = view.allSubViewsOf(type: UITextField.self).first
+        textField?.text = "500"
+        
+        assertSnapshot(matching: view, as: .image(size: size), record: true)
+        //assertSnapshot(matching: view, as: .image(size: size))
+    }
+    
     func test_initialTipInputView() {
         
         let size = CGSize(width: screenWidth, height: 56+56+16)
