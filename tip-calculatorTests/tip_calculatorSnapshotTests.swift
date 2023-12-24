@@ -105,6 +105,20 @@ final class tip_calculatorSnapshotTests: XCTestCase {
         //assertSnapshot(matching: view, as: .image(size: size), record: true)
         assertSnapshot(matching: view, as: .image(size: size))
     }
+    
+    func test_SplitInputView_whenPlusTapped_ViewShouldShow_2() {
+        
+        let size = CGSize(width: screenWidth, height: 56)
+        
+        let view = SplitInputView()
+        //gets the + button
+        let button = view.allSubViewsOf(type: UIButton.self).last
+        //taps which should sendAction to increment number of people to 2
+        button?.sendActions(for: .touchUpInside)
+        
+        assertSnapshot(matching: view, as: .image(size: size), record: true)
+        //assertSnapshot(matching: view, as: .image(size: size))
+    }
 }
 
 //this will allow us to access all subviews of the UIView type, which helps me examine the textfields inside of BillInputView
