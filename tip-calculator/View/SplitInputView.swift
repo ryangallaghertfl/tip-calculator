@@ -46,6 +46,7 @@ class SplitInputView: UIView {
             text: "1",
             font: ThemeFont.bold(ofSize: 20),
             backgroundColour: .white)
+        label.accessibilityIdentifier = ScreenIdentifier.SplitInputView.quantityValueLabel.rawValue
         return label
     }()
     
