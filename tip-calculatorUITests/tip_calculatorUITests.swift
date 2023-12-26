@@ -60,5 +60,13 @@ final class tip_calculatorUITests: XCTestCase {
         XCTAssertEqual(screen.totalBillValueLabel.label, "£115")
         XCTAssertEqual(screen.totalTipValueLabel.label, "£15")
     }
+    
+    func test_GivenEnterBill100_Given1Person_GivenTip20percent_TipShouldBe20_TotalShouldBe120_PerPersonShouldBe120() {
+        screen.enterBill(amount: 100)
+        screen.selectTip(tip: .twentyPercent)
+        XCTAssertEqual(screen.totalAmountPerPersonValueLabel.label, "£120")
+        XCTAssertEqual(screen.totalBillValueLabel.label, "£120")
+        XCTAssertEqual(screen.totalTipValueLabel.label, "£20")
+    }
 
 }
