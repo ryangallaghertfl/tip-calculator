@@ -85,5 +85,12 @@ class CalculatorScreen {
         billInputViewTextField.tap()
         billInputViewTextField.typeText("\(amount)\n") //new line closes keyboard
     }
+    
+    enum Tip {
+        case tenPercent
+        case fifteenPercent
+        case twentyPercent
+        case custom(value: Int)
+    }
 }
 
