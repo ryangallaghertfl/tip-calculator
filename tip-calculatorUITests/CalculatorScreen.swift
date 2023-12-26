@@ -105,6 +105,10 @@ class CalculatorScreen {
         decrementButton.tap(withNumberOfTaps: numberOfTaps, numberOfTouches: 1)
     }
     
+    func selectIncrementButton(numberOfTaps: Int) {
+        incrementButton.tap(withNumberOfTaps: numberOfTaps, numberOfTouches: 1)
+    }
+    
     enum Tip {
         case tenPercent
         case fifteenPercent
