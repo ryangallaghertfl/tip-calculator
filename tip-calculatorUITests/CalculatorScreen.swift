@@ -58,5 +58,10 @@ class CalculatorScreen {
     var customTipButton: XCUIElement {
         return app.buttons[ScreenIdentifier.TipInputView.customTipButton.rawValue]
     }
+    
+    //the alert textfield popup when custom is tapped
+    var customTipAlertTextField: XCUIElement {
+        return app.textFields[ScreenIdentifier.TipInputView.customTipAlertTextField.rawValue]
+    }
 }
 
