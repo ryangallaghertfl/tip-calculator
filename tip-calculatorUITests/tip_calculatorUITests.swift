@@ -110,5 +110,26 @@ final class tip_calculatorUITests: XCTestCase {
         XCTAssertEqual(screen.totalTipValueLabel.label, "£200")
     }
     
+    func test_givenPreviousInputValues_givenLogoViewIsDoubleTapped_allValuesAreReset() {
+        screen.enterBill(amount: 300)
+        screen.selectTip(tip: .custom(value: 200))
+        screen.selectIncrementButton(numberOfTaps: 1)
+        
+        //before reset
+        XCTAssertEqual(screen.totalAmountPerPersonValueLabel.label, "£250")
+        XCTAssertEqual(screen.totalBillValueLabel.label, "£500")
+        XCTAssertEqual(screen.totalTipValueLabel.label, "£200")
+        XCTAssertEqual(screen.splitValueLabel.label, "2")
+        
+        //LogoView double-tapped to reset
+        screen.doubleTapLogoView()
+        XCTAssertEqual(screen.totalAmountPerPersonValueLabel.label, "£0")
+        XCTAssertEqual(screen.totalBillValueLabel.label, "£0")
+        XCTAssertEqual(screen.totalTipValueLabel.label, "£0")
+        XCTAssertEqual(screen.splitValueLabel.label, "1")
+        XCTAssertEqual(screen.billInputViewTextField.label, "")
+        XCTAssertEqual(screen.customTipButton.label, "Custom tip")
+    }
+    
 
 }
