@@ -109,6 +109,10 @@ class CalculatorScreen {
         incrementButton.tap(withNumberOfTaps: numberOfTaps, numberOfTouches: 1)
     }
     
+    func doubleTapLogoView() {
+        logoView.tap(withNumberOfTaps: 2, numberOfTouches: 1)
+    }
+    
     enum Tip {
         case tenPercent
         case fifteenPercent
