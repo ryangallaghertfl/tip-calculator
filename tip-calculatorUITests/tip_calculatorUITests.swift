@@ -100,5 +100,15 @@ final class tip_calculatorUITests: XCTestCase {
         XCTAssertEqual(screen.totalTipValueLabel.label, "£20")
     }
     
+    func test_given300amount_givenCustomTip200_givenIncrement1TapFor2people_TipShouldBe200_TotalShouldBe500_PerPersonShouldBe250() {
+        screen.enterBill(amount: 300)
+        screen.selectTip(tip: .custom(value: 200))
+        //tap increment once - 2 people
+        screen.selectIncrementButton(numberOfTaps: 1)
+        XCTAssertEqual(screen.totalAmountPerPersonValueLabel.label, "£250")
+        XCTAssertEqual(screen.totalBillValueLabel.label, "£500")
+        XCTAssertEqual(screen.totalTipValueLabel.label, "£200")
+    }
+    
 
 }
