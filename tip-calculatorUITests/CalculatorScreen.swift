@@ -73,5 +73,10 @@ class CalculatorScreen {
     var incrementButton: XCUIElement {
         return app.buttons[ScreenIdentifier.SplitInputView.incrementButton.rawValue]
     }
+    
+    //display of amount eg 1
+    var splitValueLabel: XCUIElement {
+        return app.staticTexts[ScreenIdentifier.SplitInputView.quantityValueLabel.rawValue]
+    }
 }
 
