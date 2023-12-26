@@ -54,5 +54,9 @@ class CalculatorScreen {
     var twentyPercentTipButton: XCUIElement {
         return app.buttons[ScreenIdentifier.TipInputView.twentyPercentButton.rawValue]
     }
+    
+    var customTipButton: XCUIElement {
+        return app.buttons[ScreenIdentifier.TipInputView.customTipButton.rawValue]
+    }
 }
 
