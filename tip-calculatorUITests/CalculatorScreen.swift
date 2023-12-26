@@ -63,5 +63,11 @@ class CalculatorScreen {
     var customTipAlertTextField: XCUIElement {
         return app.textFields[ScreenIdentifier.TipInputView.customTipAlertTextField.rawValue]
     }
+    
+    //MARK: SplitInputView
+    
+    var decrementButton: XCUIElement {
+        return app.buttons[ScreenIdentifier.SplitInputView.decrementButton.rawValue]
+    }
 }
 
