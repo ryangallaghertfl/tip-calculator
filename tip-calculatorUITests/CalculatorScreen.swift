@@ -78,5 +78,12 @@ class CalculatorScreen {
     var splitValueLabel: XCUIElement {
         return app.staticTexts[ScreenIdentifier.SplitInputView.quantityValueLabel.rawValue]
     }
+    
+    //MARK: funcs that represent actions
+    
+    func enterBill(amount: Double) {
+        billInputViewTextField.tap()
+        billInputViewTextField.typeText("\(amount)\n") //new line closes keyboard
+    }
 }
 
