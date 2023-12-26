@@ -36,5 +36,10 @@ class CalculatorScreen {
         return app.staticTexts[ScreenIdentifier.ResultView.totalTipValueLabel.rawValue]
     }
     
+    //MARK: BillInputView
+    var billInputViewTextField: XCUIElement {
+        return app.textFields[ScreenIdentifier.BillInputView.textField.rawValue]
+    }
+    
 }
 
