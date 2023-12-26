@@ -86,6 +86,21 @@ class CalculatorScreen {
         billInputViewTextField.typeText("\(amount)\n") //new line closes keyboard
     }
     
+    func selectTip(tip: Tip) {
+        switch tip {
+        case .tenPercent:
+            tenPercentTipButton.tap()
+        case .fifteenPercent:
+            fifteenPercentTipButton.tap()
+        case .twentyPercent:
+            twentyPercentTipButton.tap()
+        case .custom(value: let value):
+            customTipButton.tap()
+            XCTAssertTrue(customTipAlertTextField.waitForExistence(timeout: 1.0))
+            customTipAlertTextField.typeText("\(value)\n")
+        }
+    }
+    
     enum Tip {
         case tenPercent
         case fifteenPercent
