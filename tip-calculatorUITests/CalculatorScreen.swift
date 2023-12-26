@@ -41,5 +41,10 @@ class CalculatorScreen {
         return app.textFields[ScreenIdentifier.BillInputView.textField.rawValue]
     }
     
+    //MARK: TipInputView
+    
+    var tenPercentTipButton: XCUIElement {
+        return app.buttons[ScreenIdentifier.TipInputView.tenPercentButton.rawValue]
+    }
 }
 
