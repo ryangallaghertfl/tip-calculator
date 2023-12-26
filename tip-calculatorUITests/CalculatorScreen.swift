@@ -69,5 +69,9 @@ class CalculatorScreen {
     var decrementButton: XCUIElement {
         return app.buttons[ScreenIdentifier.SplitInputView.decrementButton.rawValue]
     }
+    
+    var incrementButton: XCUIElement {
+        return app.buttons[ScreenIdentifier.SplitInputView.incrementButton.rawValue]
+    }
 }
 
