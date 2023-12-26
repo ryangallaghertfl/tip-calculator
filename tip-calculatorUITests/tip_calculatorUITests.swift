@@ -38,11 +38,19 @@ final class tip_calculatorUITests: XCTestCase {
         XCTAssertEqual(screen.totalTipValueLabel.label, "£0")
     }
     
-    func test_GivenEnterBill100_1Person_noTip_TipShouldBe0_TotalShouldBe100_PerPersonShouldBe100() {
+    func test_GivenEnterBill100_Given1Person_GivenNoTip_TipShouldBe0_TotalShouldBe100_PerPersonShouldBe100() {
         screen.enterBill(amount: 100)
         XCTAssertEqual(screen.totalAmountPerPersonValueLabel.label, "£100")
         XCTAssertEqual(screen.totalBillValueLabel.label, "£100")
         XCTAssertEqual(screen.totalTipValueLabel.label, "£0")
+    }
+
+    func test_GivenEnterBill100_Given1Person_GivenTip10percent_TipShouldBe10_TotalShouldBe110_PerPersonShouldBe110() {
+        screen.enterBill(amount: 100)
+        screen.selectTip(tip: .tenPercent)
+        XCTAssertEqual(screen.totalAmountPerPersonValueLabel.label, "£110")
+        XCTAssertEqual(screen.totalBillValueLabel.label, "£110")
+        XCTAssertEqual(screen.totalTipValueLabel.label, "£10")
     }
 
 }
