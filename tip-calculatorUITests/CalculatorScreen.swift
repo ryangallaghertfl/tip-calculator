@@ -15,6 +15,15 @@ class CalculatorScreen {
         self.app = app
     }
     
+    //MARK: LogoView element
+    //returns entire logoView
+    var logoView: XCUIElement {
+        return app.otherElements[ScreenIdentifier.LogoView.logoView.rawValue]
+    }
+    
+    
+    //MARK: ResultView elements
+    //staticTexts refers to labels
     var totalAmountPerPersonValueLabel: XCUIElement {
         return app.staticTexts[ScreenIdentifier.ResultView.totalAmountPerPersonValueLabel.rawValue]
     }
